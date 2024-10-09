@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Sprint Planner</div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="capacity">Sprint Capacity (Points)</label>
+              <input id="capacity" type="number" class="form-control" [(ngModel)]="sprintCapacity" />
+            </div>
+            <button class="btn btn-primary mt-3" (click)="onAutoSelect()">Auto Select Stories</button>
+            <button class="btn btn-danger mt-3" (click)="onClearAll()">Clear Stories</button>
+            <button class="btn btn-warning mt-3" (click)="onClearSelected()">Clear Selected Stories</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-sprint-display [selectedStories]="selectedStories"></app-sprint-display>
+  </div>
+  

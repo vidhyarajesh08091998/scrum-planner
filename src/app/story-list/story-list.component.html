@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">Story List</div>
+          <div class="card-body">
+            <ul class="list-group" *ngIf="stories.length; else noStories">
+              <li *ngFor="let story of stories" class="list-group-item">
+                {{ story.title }} - {{ story.points }} points
+              </li>
+            </ul>
+            <ng-template #noStories>
+              <p>No stories added yet.</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
